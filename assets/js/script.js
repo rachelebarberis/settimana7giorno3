@@ -50,7 +50,7 @@ function printBooks () {
 
         const button = document.createElement('button');
         button.className='btn btn-danger';
-        button.textContent='Sbuya';
+        button.textContent='Scarta';
         button.addEventListener ('click', () =>removeCard(index));
 
         const addButton = document.createElement('button');
