@@ -2,7 +2,11 @@ const url ='https://striveschool-api.herokuapp.com/books';
 let booksArray = [];
 let buy = JSON.parse(localStorage.getItem('buy')) || [];
 
+document.addEventListener('load', init())
 
+function init() {
+    initBooks();
+}
 
 function initBooks () {
     fetch(url).then((response) => {
@@ -109,8 +113,3 @@ function printBuy() {
         buyContainer.appendChild(buyList);
     }
 }
-
-function init() {
-    initBooks();
-}
-window.onload =init;
